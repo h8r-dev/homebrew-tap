@@ -5,20 +5,12 @@
 class Heighliner < Formula
   desc "Heighliner is an application development platform with the state-of-the-art cloud native stacks"
   homepage "https://github.com/h8r-dev/heighliner"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.2.0/heighliner_v0.2.0_darwin_amd64.tar.gz"
-      sha256 "f8220d19edad74c173ddb25795931c2fe1829a16585b925ed28e36bc74b77daa"
-
-      def install
-        bin.install "hln"
-      end
-    end
     if Hardware::CPU.arm?
-      url "https://dl.h8r.io/hln/releases/0.2.0/heighliner_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "b8e00b12d7912acf288375c09a457a52539a65cd8471e209b3c23c7d9382b603"
+      url "https://dl.h8r.io/hln/releases/0.2.1/heighliner_v0.2.1_darwin_arm64.tar.gz"
+      sha256 "b3557ad2112bdb1100aedd682d532ef86e389b2b64a7a39720f5f9f9dfee7722"
 
       def install
         bin.install "hln"
@@ -27,17 +19,9 @@ class Heighliner < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.2.0/heighliner_v0.2.0_linux_amd64.tar.gz"
-      sha256 "79204057810f6d26d64a7a383a4e6fa877fc4450c1e273c0f351cc3a65f95353"
-
-      def install
-        bin.install "hln"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.h8r.io/hln/releases/0.2.0/heighliner_v0.2.0_linux_arm64.tar.gz"
-      sha256 "4adcb1e0e0d2bc447eec7709e102eec776363d3040a877de9f4b1494ec66f819"
+      url "https://dl.h8r.io/hln/releases/0.2.1/heighliner_v0.2.1_linux_arm64.tar.gz"
+      sha256 "7cac03f5a91086d9a0bbe98c0ae8b4f52e557e8b7f0b5e5850c92881299f5761"
 
       def install
         bin.install "hln"
