@@ -5,20 +5,20 @@
 class Heighliner < Formula
   desc "Heighliner is an application development platform with the state-of-the-art cloud native stacks"
   homepage "https://github.com/h8r-dev/heighliner"
-  version "0.2.3"
+  version "0.2.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://dl.h8r.io/hln/releases/0.2.3/heighliner_v0.2.3_darwin_arm64.tar.gz"
-      sha256 "180fc45b356c1a349725cfde2f2f787db8c9569e393c2b322ae0404f62327869"
+    if Hardware::CPU.intel?
+      url "https://dl.h8r.io/hln/releases/0.2.4/heighliner_v0.2.4_darwin_amd64.tar.gz"
+      sha256 "21791445ea982ad5fa4c303bceff197997f0aba117a3e86b20a0dda7f70864aa"
 
       def install
         bin.install "hln"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.2.3/heighliner_v0.2.3_darwin_amd64.tar.gz"
-      sha256 "0323b24aebba51ea8d2e8b27c00353e0c3acd530453bdce74df590bf11e4a208"
+    if Hardware::CPU.arm?
+      url "https://dl.h8r.io/hln/releases/0.2.4/heighliner_v0.2.4_darwin_arm64.tar.gz"
+      sha256 "3252edf4a776a9b5bf33d1a8737d713c57a7aadc75d6691116c0f990b66f68b8"
 
       def install
         bin.install "hln"
@@ -27,17 +27,17 @@ class Heighliner < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.h8r.io/hln/releases/0.2.3/heighliner_v0.2.3_linux_arm64.tar.gz"
-      sha256 "eb211c403b8065290d7b5ceb964d0a3353c7dfd0d97c0873c10f3f414f8e29b6"
+    if Hardware::CPU.intel?
+      url "https://dl.h8r.io/hln/releases/0.2.4/heighliner_v0.2.4_linux_amd64.tar.gz"
+      sha256 "6b71dd39c44d2484dc0c857f046bbb9f852f2f37e6917e29bcf99dc3016f327f"
 
       def install
         bin.install "hln"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.2.3/heighliner_v0.2.3_linux_amd64.tar.gz"
-      sha256 "7174ce3362b55323b81125191e0ae7e0a910e0f1e6e47c639a6f4c2159eac130"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dl.h8r.io/hln/releases/0.2.4/heighliner_v0.2.4_linux_arm64.tar.gz"
+      sha256 "23c106f3042aa9974cafcd949d4186816b5c9240ce4181ae05f8d4af86ec0342"
 
       def install
         bin.install "hln"
