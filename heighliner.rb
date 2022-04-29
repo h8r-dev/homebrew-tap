@@ -8,17 +8,17 @@ class Heighliner < Formula
   version "0.2.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://dl.h8r.io/hln/releases/0.2.5/heighliner_v0.2.5_darwin_arm64.tar.gz"
-      sha256 "00876c2767c1f4cc9b3b69f151b815c9e51847491e8365d3a78708cbf676ef98"
+    if Hardware::CPU.intel?
+      url "https://dl.h8r.io/hln/releases/0.2.5/heighliner_v0.2.5_darwin_amd64.tar.gz"
+      sha256 "f5c46bc4eb511c50ee330f5aa2d0011bc49d27ed9bcc300b4583b31ba5fd967b"
 
       def install
         bin.install "hln"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.2.5/heighliner_v0.2.5_darwin_amd64.tar.gz"
-      sha256 "3408b74f6b86151783bc80f9fdb829e8f1a4a1dd21f744d9ff24ab57c53755b8"
+    if Hardware::CPU.arm?
+      url "https://dl.h8r.io/hln/releases/0.2.5/heighliner_v0.2.5_darwin_arm64.tar.gz"
+      sha256 "1710a1cd6558fc98a99522cd255f4c9e98d1c23e5ea01182433c32e8d3be145e"
 
       def install
         bin.install "hln"
@@ -29,7 +29,7 @@ class Heighliner < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://dl.h8r.io/hln/releases/0.2.5/heighliner_v0.2.5_linux_arm64.tar.gz"
-      sha256 "fd94f506d2f2b8f273ea70f32e0dc01bf26e3d77a363891704dfdb6005cd43ba"
+      sha256 "d9bc99c4adf3760bde08ed903e91b344f327a9cb6fd5438547bb41633afe90f7"
 
       def install
         bin.install "hln"
@@ -37,7 +37,7 @@ class Heighliner < Formula
     end
     if Hardware::CPU.intel?
       url "https://dl.h8r.io/hln/releases/0.2.5/heighliner_v0.2.5_linux_amd64.tar.gz"
-      sha256 "e764f0a445d2385a04ddd1515b3609b132e1ba88dafcf21ef87b0a95bf08890b"
+      sha256 "a22367c774ebcc0224dafdaa86905a9c70c2b58086d3d32baee4095f313b10af"
 
       def install
         bin.install "hln"
