@@ -5,20 +5,20 @@
 class Heighliner < Formula
   desc "Heighliner is an application development platform with the state-of-the-art cloud native stacks"
   homepage "https://github.com/h8r-dev/heighliner"
-  version "0.2.7"
+  version "0.2.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://dl.h8r.io/hln/releases/0.2.7/heighliner_v0.2.7_darwin_arm64.tar.gz"
-      sha256 "610e6035173919f166772d42159fe5529ca6e06480c5f4b2b0c5d5447572a423"
+      url "https://dl.h8r.io/hln/releases/0.2.8/heighliner_v0.2.8_darwin_arm64.tar.gz"
+      sha256 "30ba77964294fe53cc6d3423a540ee4e8098c33c54c02800781bc403e530ff74"
 
       def install
         bin.install "hln"
       end
     end
     if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.2.7/heighliner_v0.2.7_darwin_amd64.tar.gz"
-      sha256 "4ec1b520a4e928c454fd9e4a78dd32cfe5d7b58bb9e271cedb6f25eca35ec596"
+      url "https://dl.h8r.io/hln/releases/0.2.8/heighliner_v0.2.8_darwin_amd64.tar.gz"
+      sha256 "ca4840f176c74d85e5f923172b892d9575135909f3e3896c1169afc69798bd77"
 
       def install
         bin.install "hln"
@@ -27,17 +27,17 @@ class Heighliner < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.h8r.io/hln/releases/0.2.7/heighliner_v0.2.7_linux_arm64.tar.gz"
-      sha256 "2bd2f65d6bf2befade31a14adba70ac8e83cf89d1f1072035ccca1bba69627ec"
+    if Hardware::CPU.intel?
+      url "https://dl.h8r.io/hln/releases/0.2.8/heighliner_v0.2.8_linux_amd64.tar.gz"
+      sha256 "60f74f5574a0023f37a6eb5aa37ef62a5a01f0f30cda57d85ff1308430be11f9"
 
       def install
         bin.install "hln"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.2.7/heighliner_v0.2.7_linux_amd64.tar.gz"
-      sha256 "35dc1ae9a7a5da3f63e05fb9407d341de76b7b496f3706c9dd28eadbafb93e8c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dl.h8r.io/hln/releases/0.2.8/heighliner_v0.2.8_linux_arm64.tar.gz"
+      sha256 "740bfd2d399042c61272c7abe03b20f786677a38cc62106fac1d600c81b72dbf"
 
       def install
         bin.install "hln"
