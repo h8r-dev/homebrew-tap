@@ -5,20 +5,20 @@
 class Heighliner < Formula
   desc "Heighliner is an application development platform with the state-of-the-art cloud native stacks"
   homepage "https://github.com/h8r-dev/heighliner"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.3.0/heighliner_v0.3.0_darwin_amd64.tar.gz"
-      sha256 "c28427b6cfd8a6b9c3b11c94b55545584320f629de0e6e81b869f1d06b0693ac"
+    if Hardware::CPU.arm?
+      url "https://dl.h8r.io/hln/releases/0.3.1/heighliner_v0.3.1_darwin_arm64.tar.gz"
+      sha256 "da5127ab8601829f7fcaf7360360d3f011f60c2428c4f2c5022eced4cf54afb2"
 
       def install
         bin.install "hln"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://dl.h8r.io/hln/releases/0.3.0/heighliner_v0.3.0_darwin_arm64.tar.gz"
-      sha256 "53874b1b0a1ef48c250088fe6562814d6745ee4b218943004c15178c74dee180"
+    if Hardware::CPU.intel?
+      url "https://dl.h8r.io/hln/releases/0.3.1/heighliner_v0.3.1_darwin_amd64.tar.gz"
+      sha256 "32841c27644e192b192c63f11d770978ebcee5d0cfc51cb1b12c89bd5a3ca5c9"
 
       def install
         bin.install "hln"
@@ -28,16 +28,16 @@ class Heighliner < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://dl.h8r.io/hln/releases/0.3.0/heighliner_v0.3.0_linux_amd64.tar.gz"
-      sha256 "5d033438520e7fa0592b0b6b461f16073335728c37e800e7e47805815315d41c"
+      url "https://dl.h8r.io/hln/releases/0.3.1/heighliner_v0.3.1_linux_amd64.tar.gz"
+      sha256 "d22e3c7f2fb7e2e1f9e9fb9c8cdea5bcabd872fa351837c24eb89fb491269647"
 
       def install
         bin.install "hln"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://dl.h8r.io/hln/releases/0.3.0/heighliner_v0.3.0_linux_arm64.tar.gz"
-      sha256 "ad9df9f534115c61fd3de765d56ef73561e1b0d1839547335cc0dfcabc772725"
+      url "https://dl.h8r.io/hln/releases/0.3.1/heighliner_v0.3.1_linux_arm64.tar.gz"
+      sha256 "65e6c2b3e0608bedc383e14aedf4ab661d4e1ebe4d31dfc46863f38bc22a787c"
 
       def install
         bin.install "hln"
